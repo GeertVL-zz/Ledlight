@@ -27,6 +27,12 @@
     <ClInclude Include="TestExtensions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RuntimeErrorStub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RuntimeError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -35,7 +41,10 @@
     <ClCompile Include="LedDriverTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ToStringExtensions.cpp">
+    <ClCompile Include="LedDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RuntimeErrorStub.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
