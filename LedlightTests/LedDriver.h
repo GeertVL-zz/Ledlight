@@ -1,15 +1,28 @@
 #pragma once
 
-void LedDriver_Create(uint16_t* virtualLeds);
 
-void LedDriver_TurnOn(int ledNumber);
+class LedDriver
+{
+	uint16_t* ledsAddress;
+	uint16_t ledsImage;
 
-void LedDriver_TurnOff(int ledNumber);
+	void updateHardware();
+	bool IsLedOutOfBounds(int ledNumber);
+	int convertLedNumberToBit(int ledNumber);
+	void setLedImageBit(int ledNumber);
+	void clearLedImageBit(int ledNumber);
+public:
+	void Create(uint16_t* virtualLeds);
 
-void LedDriver_TurnAllOn(void);
+	void TurnOn(int ledNumber);
 
-void LedDriver_TurnAllOff();
+	void TurnOff(int ledNumber);
 
-bool LedDriver_IsOn(int ledNumber);
+	void TurnAllOn(void);
 
-bool LedDriver_IsOff(int ledNumber);
+	void TurnAllOff();
+
+	bool IsOn(int ledNumber);
+
+	bool IsOff(int ledNumber);
+};
